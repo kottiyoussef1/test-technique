@@ -1,4 +1,3 @@
-// Define the countEntities function that takes data as an argument
 const countEntities = (data) => {
     // Check if data is not an array
     if(!Array.isArray(data)){
@@ -18,10 +17,13 @@ const countEntities = (data) => {
         return 'data must contain entries';
     }
 
-    return data;
-
-
+    return data.map(country => ({
+        name: `${country.name} [${country.people.length}]`,
+        people: country.people.map(person => ({
+            name: `${person.name} [${person.animals.length}]`,
+            animals: person.animals
+        }))
+    }));
 };
 
-// Export the countEntities function
 module.exports = countEntities;
