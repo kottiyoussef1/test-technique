@@ -16,7 +16,7 @@ const filteredData = pattern ? filterAnimals(data, pattern) : data;
     if (!pattern) {
         console.log("Please specify a --filter ");
     } else {
-        console.log("--filer exists");
+        console.log(JSON.stringify(filteredData, null, 2));
     }
 
 
