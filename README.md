@@ -37,6 +37,19 @@ To start the project in development mode, run:
 node app.js --filter="lion" --count
 ```
 
+or
+
+```bash
+node app.js --filter="lion"
+```
+
+or 
+
+```bash
+node app.js --count
+```
+
+
 ## Tests
 
 To run the tests, use the following command:
